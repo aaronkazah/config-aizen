@@ -18,9 +18,9 @@ void ConfigAizen::parseFile(const char *fileName) {
             }
             // Grab name and value, separated by assignment operator
             // Insert it into our map file
-            auto delimiterPos { line.find('=') };
-            std::string key { line.substr(0, delimiterPos) };
-            std::string value { line.substr(delimiterPos + 1) };
+            auto delimiterPos {line.find('=')};
+            std::string key {line.substr(0, delimiterPos)};
+            std::string value {line.substr(delimiterPos + 1)};
             configMap.insert({key, value});
         }
     } else {
@@ -37,19 +37,19 @@ std::unordered_map<std::string, std::string>::const_iterator ConfigAizen::findKe
 }
 
 std::string ConfigAizen::getString(std::string variableName) {
-    auto key { findKey(variableName) };
-    std::string value { key -> second };
+    auto key {findKey(variableName)};
+    std::string value {key -> second };
     return value;
 };
 
 int ConfigAizen::getInt(std::string variableName) {
-    auto key { findKey(variableName) };
-    int number { std::stoi(key -> second) };
+    auto key {findKey(variableName)};
+    int number {std::stoi(key -> second)};
     return number;
 };
 
 double ConfigAizen::getDouble(std::string variableName) {
-    auto key { findKey(variableName) };
+    auto key {findKey(variableName)};
     double number {std::stof(key -> second)};
     return number;
 

@@ -3,4 +3,5 @@ project(config_aizen)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(config_aizen main.cpp source/config-aizen.cpp source/config-aizen.hpp)
+configure_file(test.ini ${CMAKE_CURRENT_BINARY_DIR}/test.ini COPYONLY)
+add_executable(${PROJECT_NAME} main.cpp source/config-aizen.cpp source/config-aizen.hpp)
