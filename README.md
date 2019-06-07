@@ -34,7 +34,7 @@ int main() {
     std::cout << "DOUBLE: " <<doubleVal << std::endl;
     std::cout << "BOOLEAN: " <<booleanVal << std::endl;
 
-    /* Name: JACK, INTEGER: 43, DOUBLE: 43.6, booleanVal: 1*/
+    /* Name: JACK, INTEGER: 43, DOUBLE: 43.9, booleanVal: 1*/
     return 0;
 }
 ```
