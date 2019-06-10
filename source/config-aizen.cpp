@@ -57,7 +57,6 @@ double ConfigAizen::getDouble(std::string variableName) {
     auto key {findKey(variableName)};
     double number {std::stof(key -> second)};
     return number;
-
 };
 
 bool ConfigAizen::getBoolean(std::string variableName){
